@@ -1,7 +1,6 @@
 package com.gcalado.webspring.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonFormatTypes;
 import com.gcalado.webspring.entities.enums.OrderStatus;
 import jakarta.persistence.*;
 
