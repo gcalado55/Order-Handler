@@ -2,7 +2,6 @@ package com.gcalado.webspring.resources;
 
 import com.gcalado.webspring.entities.Order;
 import com.gcalado.webspring.services.OrderService;
-import com.gcalado.webspring.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
