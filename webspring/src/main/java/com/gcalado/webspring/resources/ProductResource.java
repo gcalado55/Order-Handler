@@ -19,9 +19,9 @@ public class ProductResource {
     private ProductService productService;
 
     @GetMapping
-    public ResponseEntity<List<Product>> findAll(){
-        List<Product> Products = productService.findAll();
-        return ResponseEntity.ok().body(Products);
+    public ResponseEntity<List<Product>> findAll() {
+        List<Product> list = productService.findAll();
+        return ResponseEntity.ok().body(list);
     }
 
     @GetMapping(value = "/{id}")
