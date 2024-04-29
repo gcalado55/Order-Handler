@@ -2,6 +2,7 @@ package com.gcalado.webspring.services;
 
 import com.gcalado.webspring.entities.User;
 import com.gcalado.webspring.repositories.UserRepository;
+import com.gcalado.webspring.services.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class UserService {
 
     public User findById(Long id){
         Optional<User> userObj = repository.findById(id);
-        return userObj.get();
+        return userObj.orElseThrow(() -> new ResourceNotFoundException(id));
     }
 
     public User insert(User obj){
